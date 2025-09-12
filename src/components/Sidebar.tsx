@@ -19,19 +19,16 @@ function Sidebar() {
   ];
 
   return (
-    <div className="absolute left-0 flex h-[80px] w-full items-center bg-white/5 px-2 backdrop-blur-md">
-      <div className="flex flex-col w-1/3 justify-center gap-5">
-        {navItems.map((item) => (
-          <Link
-            href={item.label}
-            key={item.label}
-            className="text-grad-stroke text-[20px] font-[500]"
-            data-text={item.label}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </div>
+    <div className="flex h-full flex-col gap-5 overflow-y-auto bg-white/5 px-2 backdrop-blur-xs">
+      {navItems.map((item) => (
+        <Link
+          href={item.label}
+          key={item.label}
+          className="text-[16px] font-[500] text-[#ffa500] uppercase"
+        >
+          {item.label}
+        </Link>
+      ))}
     </div>
   );
 }

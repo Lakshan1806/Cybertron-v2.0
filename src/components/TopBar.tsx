@@ -11,19 +11,16 @@ function TopBar() {
   ];
 
   return (
-    <div className="absolute top-0 flex h-[80px] w-full items-center bg-white/5 px-2 backdrop-blur-md">
-      <div className="flex w-1/3 justify-center gap-5">
-        {navItems.map((item) => (
-          <Link
-            href={item.path}
-            key={item.path}
-            className="text-grad-stroke text-[20px] font-[500]"
-            data-text={item.label}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </div>
+    <div className="flex h-full w-full items-center gap-5 bg-white/5 px-2 backdrop-blur-xs">
+      {navItems.map((item) => (
+        <Link
+          href={item.path}
+          key={item.path}
+          className="text-[16px] font-[500] text-[#ffa500] uppercase"
+        >
+          {item.label}
+        </Link>
+      ))}
     </div>
   );
 }
