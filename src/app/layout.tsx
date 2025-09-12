@@ -27,11 +27,15 @@ function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} h-dvh antialiased bg-[url(/background.jpg)] bg-fixed`}
       >
-        <TopBar />
-        <Sidebar />
-        <main className="pt-[80px]">{children}</main>
+        <div className="grid h-full grid-rows-[80px_1fr]">
+          <TopBar />
+          <div className="grid h-full min-h-0 grid-cols-[200px_1fr]">
+            <Sidebar />
+            <main>{children}</main>
+          </div>
+        </div>
       </body>
     </html>
   );
