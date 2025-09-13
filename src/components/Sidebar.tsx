@@ -19,7 +19,7 @@ function Sidebar() {
   ];
 
   return (
-    <div className="flex h-full flex-col gap-5 overflow-y-auto bg-white/5 px-2 backdrop-blur-xs">
+    <div className="flex h-full flex-col gap-5 overflow-y-auto bg-white/5 p-4 backdrop-blur-xs">
       {navItems.map((item) => (
         <Link
           href={item.label}
