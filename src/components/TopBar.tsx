@@ -11,7 +11,7 @@ function TopBar() {
   ];
 
   return (
-    <div className="flex h-full w-full items-center gap-5 bg-white/5 px-2 backdrop-blur-xs">
+    <div className="flex h-full w-full items-center gap-5 bg-white/5 p-4 backdrop-blur-xs">
       {navItems.map((item) => (
         <Link
           href={item.path}
